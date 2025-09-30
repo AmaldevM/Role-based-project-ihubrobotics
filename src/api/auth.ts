@@ -5,6 +5,8 @@ export const loginApi = async (email: string, password: string) => {
                 resolve({ token: "fake-jwt-token", role: "admin" });
             } else if (email === "employee@example.com" && password === "employee123") {
                 resolve({ token: "fake-jwt-token", role: "employee" });
+            } else if (email === "superadmin@example.com" && password === "superadmin123") {
+                resolve({ token: "fake-jwt-token", role: "superAdmin" });
             } else {
                 reject("Invalid credentials");
             }
