@@ -4,6 +4,7 @@ import { z } from "zod";
 import { loginApi } from "../api/auth";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const loginSchema = z.object({
   email: z.string().email({ message: "Invalid email address" }),
@@ -44,7 +45,7 @@ export default function LoginPage() {
         className="p-6 bg-white shadow-lg rounded-lg w-full max-w-md"
       >
         <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
-
+        <Button>Click Me</Button>
         <div className="mb-4">
           <input
             type="email"
