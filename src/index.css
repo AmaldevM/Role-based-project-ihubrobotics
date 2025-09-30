@@ -55,3 +55,37 @@
     border-color: hsl(var(--sidebar-border));
   }
 }
+
+@layer base {
+  :root {
+    --sidebar-background: 0 0% 100%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+  }
+
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 0 0% 98%;
+  }
+}
+
+@layer components {
+  .bg-sidebar {
+    background-color: hsl(var(--sidebar-background));
+  }
+  
+  .bg-sidebar-accent {
+    background-color: hsl(var(--sidebar-accent));
+  }
+  
+  .text-sidebar-accent-foreground {
+    color: hsl(var(--sidebar-accent-foreground));
+  }
+  
+  .border-sidebar-border {
+    border-color: hsl(var(--sidebar-border));
+  }
+}
