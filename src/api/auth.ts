@@ -1,14 +1,18 @@
 export const loginApi = async (email: string, password: string) => {
     return new Promise<{ token: string; role: string }>((resolve, reject) => {
         setTimeout(() => {
-            if (email === "admin@example.com" && password === "admin123") {
-                resolve({ token: "fake-jwt-token", role: "admin" });
-            } else if (email === "employee@example.com" && password === "employee123") {
-                resolve({ token: "fake-jwt-token", role: "employee" });
-            } else if (email === "superadmin@example.com" && password === "superadmin123") {
-                resolve({ token: "fake-jwt-token", role: "superAdmin" });
+            const credentials: Record<string, { password: string; role: string }> = {
+                "admin@example.com": { password: "admin123", role: "admin" },
+                "employee@example.com": { password: "employee123", role: "employee" },
+                "superadmin@example.com": { password: "superadmin123", role: "superAdmin" },
+            };
+
+            const user = credentials[email];
+
+            if (user && user.password === password) {
+                resolve({ token: "fake-jwt-token", role: user.role });
             } else {
-                reject("Invalid credentials");
+                reject(new Error("Invalid credentials"));
             }
         }, 1000);
     });
