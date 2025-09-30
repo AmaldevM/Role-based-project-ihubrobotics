@@ -1,17 +1,12 @@
-import { useState } from 'react'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import LoginPage from "./pages/login";
+import Dashboard from "./pages/dashboard";
 
-function App() {
-  // eslint-disable-next-line no-empty-pattern
-  const [] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div className="bg-blue-500 text-white p-6 text-center">
-        Tailwind is working ✅
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<LoginPage />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
   );
 }
-
-export default App
