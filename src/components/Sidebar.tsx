@@ -13,7 +13,7 @@ export default function Sidebar() {
   } = useQuery({
     queryKey: ["menu", role],
     queryFn: () => getMenuByRole(role),
-    enabled: !!role, // prevents running query if role is empty
+    enabled: !!role, 
   });
 
   if (isLoading) return <div className="p-4">Loading menu...</div>;
