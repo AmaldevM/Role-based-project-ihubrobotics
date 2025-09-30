@@ -6,6 +6,8 @@ export const getMenuByRole = async (role: string) => {
     };
 
     return new Promise<string[]>((resolve) => {
-        setTimeout(() => resolve(menus[role] || []), 700);
+        setTimeout(() => {
+            resolve(menus[role] || []);
+        }, 400); 
     });
 };
