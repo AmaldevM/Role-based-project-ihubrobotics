@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+# Role-Based Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A role-based dashboard application with login authentication, role-specific sidebar menus, and protected routes.  
+Built using modern web development tools for a responsive and secure experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
+- Login form with validation
+- Role-based sidebar navigation
+- Protected routes for secure access
+- Responsive UI
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
+- **Frontend:** React, Next.js  
+- **Styling:** Tailwind CSS  
+- **Forms & Validation:** React Hook Form + Zod  
+- **Data Fetching:** TanStack Query  
+- **Language:** TypeScript
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
+- Node.js (>= 18.x recommended)
+- npm (comes with Node.js)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Steps
+1. Clone the repository:
+```bash
+git clone https://github.com/AmaldevM/Role-based-project-ihubrobotics.git
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Live Link :https://role-based-project-ihubrobotics.vercel.app/
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Navigate to the project folder:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+cd role-based-dashboard
+
+Install dependencies:
+
+npm install
+
+Run the project locally:
+
+npm run dev
+
+
+🧪 Test Credentials
+
+Admin: admin@example.com
+ / admin123
+
+Employee: employee@example.com
+ / employee123
+
+
+
+ ├── pages
+├── components
+├── styles
+├── public
+├── tailwind.config.js
+├── postcss.config.js
+└── package.json
