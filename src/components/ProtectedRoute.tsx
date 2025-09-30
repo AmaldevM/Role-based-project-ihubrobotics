@@ -1,15 +1,15 @@
-import React, { type JSX } from "react";
+import { type JSX } from "react";
 import { Navigate } from "react-router-dom";
-import Cookies from "js-cookie";
+import { useAuth } from "../hooks/useAuth";
 
 export default function ProtectedRoute({
   children,
 }: {
   children: JSX.Element;
 }) {
-  const token = Cookies.get("token");
+  const { isAuthenticated } = useAuth();
 
-  if (!token) {
+  if (!isAuthenticated()) {
     return <Navigate to="/" replace />;
   }
 
